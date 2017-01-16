@@ -25,7 +25,10 @@ $this->params['breadcrumbs'][] = $this->title;
    <h1>Diseño</h1>
     <p>
     
-        1.­ Si usted estuviera resolviendo el problema del colegio con programación orientada a objetos, defina que clases usaría, métodos y las variables de estas clases. Puede utilizar el lenguaje que más le acomode o bien pseudos código. <br/>
+        1.­ Si usted estuviera resolviendo el problema del colegio con programación orientada a objetos, defina que clases usaría, métodos y las variables de estas clases. Puede utilizar el lenguaje que más le acomode o bien pseudos código. <br/><br/>
+         
+        R="Una vez analizado el todo el proyecto, construyo la BD con sus respectivas tablas: Ej: Profesor, Cursos, Notas, Horarios, Matriculas, Asistencia. Estas tablas definidas serian mis modelos en los cuales trabajaria. Y apartir de alli prodria tener determinas funciones que me calculen por ejemplo: Promedio general del curso, promedio de un alumnos." 
+        <br/><br/>
 
         2.­ Diseñe un maz de cartas (orientado a objetos) con propiedades y métodos básicos que considere para ser utilizado en distintas aplicaciones que utilicen cartas. <br/>
 

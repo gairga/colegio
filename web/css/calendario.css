@@ -1,0 +1,48 @@
+
+body {
+  font-size: 14px;
+}
+
+.title__heading {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.calendar__wrapper {
+  width: 960px;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+}
+
+.calendar__col {
+  width: 12%;
+  float: left;
+}
+  .calendar__col--hours {
+    width: 8%;
+  }
+
+.calendar__cell {
+  width: 100%;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  height: 1em;
+  border-bottom: 1px solid #B93E7D;
+
+}
+  .calendar__cell--head, .calendar__cell--hour {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    background-color: #B93E7D;
+    color: while;
+    text-transform: capitalize;
+    border-bottom: 0;
+    border-bottom: 1px solid #B93E7D;
+
+  }
+
+  .calendar__cell--highlight {
+    background-color: #141417;
+  }

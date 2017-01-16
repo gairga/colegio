@@ -1,7 +1,9 @@
 <?php
 
 /* @var $this yii\web\View */
-
+$this->registerJsFile('@web/js/calendario.js');
+$this->registerJsFile('@web/js/calendario2.js');
+$this->registerCssFile('@web/css/calendario.css');
 use yii\helpers\Html;
 
 $this->title = 'About';
@@ -33,88 +35,99 @@ $this->params['breadcrumbs'][] = $this->title;
         2.­ Diseñe un maz de cartas (orientado a objetos) con propiedades y métodos básicos que considere para ser utilizado en distintas aplicaciones que utilicen cartas. <br/>
 
         3. Diseño código frontend
-<pre>
-<code>
+        <pre>
+              <code>
 
-var citas = {
+                          var citas = {
 
-lunes: [
+                          lunes: [
 
-{nombre: 'Daniel', hora_inicio: '08:00', hora_termino: '09:00'},
+                          {nombre: 'Daniel', hora_inicio: '08:00', hora_termino: '09:00'},
 
-{nombre: 'Daniel', hora_inicio: '09:30', hora_termino: '11:00'},
+                          {nombre: 'Daniel', hora_inicio: '09:30', hora_termino: '11:00'},
 
-{nombre: 'Daniel', hora_inicio: '15:00', hora_termino: '16:00'},
+                          {nombre: 'Daniel', hora_inicio: '15:00', hora_termino: '16:00'},
 
-{nombre: 'Daniel', hora_inicio: '17:00', hora_termino: '19:30'}
+                          {nombre: 'Daniel', hora_inicio: '17:00', hora_termino: '19:30'}
 
-],
+                          ],
 
-martes: [
+                          martes: [
 
-{nombre: 'Daniel', hora_inicio: '08:00', hora_termino: '09:00'},
+                          {nombre: 'Daniel', hora_inicio: '08:00', hora_termino: '09:00'},
 
-{nombre: 'Daniel', hora_inicio: '11:30', hora_termino: '12:00'},
+                          {nombre: 'Daniel', hora_inicio: '11:30', hora_termino: '12:00'},
 
-{nombre: 'Daniel', hora_inicio: '15:00', hora_termino: '16:00'},
+                          {nombre: 'Daniel', hora_inicio: '15:00', hora_termino: '16:00'},
 
-{nombre: 'Daniel', hora_inicio: '17:00', hora_termino: '19:30'}
+                          {nombre: 'Daniel', hora_inicio: '17:00', hora_termino: '19:30'}
 
-],
+                          ],
 
-miercoles: [
+                          miercoles: [
 
-{nombre: 'Daniel', hora_inicio: '08:00', hora_termino: '09:00'},
+                          {nombre: 'Daniel', hora_inicio: '08:00', hora_termino: '09:00'},
 
-{nombre: 'Daniel', hora_inicio: '10:30', hora_termino: '12:00'},
+                          {nombre: 'Daniel', hora_inicio: '10:30', hora_termino: '12:00'},
 
-{nombre: 'Daniel', hora_inicio: '15:00', hora_termino: '16:00'},
+                          {nombre: 'Daniel', hora_inicio: '15:00', hora_termino: '16:00'},
 
-{nombre: 'Daniel', hora_inicio: '17:00', hora_termino: '19:30'}
+                          {nombre: 'Daniel', hora_inicio: '17:00', hora_termino: '19:30'}
 
-],
+                          ],
 
-jueves: [
+                          jueves: [
 
-{nombre: 'Daniel', hora_inicio: '08:00', hora_termino: '09:00'},
+                          {nombre: 'Daniel', hora_inicio: '08:00', hora_termino: '09:00'},
 
-{nombre: 'Daniel', hora_inicio: '09:30', hora_termino: '12:00'},
+                          {nombre: 'Daniel', hora_inicio: '09:30', hora_termino: '12:00'},
 
-{nombre: 'Daniel', hora_inicio: '15:00', hora_termino: '16:00'},
+                          {nombre: 'Daniel', hora_inicio: '15:00', hora_termino: '16:00'},
 
-{nombre: 'Daniel', hora_inicio: '17:00', hora_termino: '19:30'}
+                          {nombre: 'Daniel', hora_inicio: '17:00', hora_termino: '19:30'}
 
-],
+                          ],
 
-viernes: [
+                          viernes: [
 
-{nombre: 'Daniel', hora_inicio: '08:00', hora_termino: '09:00'},
+                          {nombre: 'Daniel', hora_inicio: '08:00', hora_termino: '09:00'},
 
-{nombre: 'Daniel', hora_inicio: '09:30', hora_termino: '12:00'},
+                          {nombre: 'Daniel', hora_inicio: '09:30', hora_termino: '12:00'},
 
-{nombre: 'Daniel', hora_inicio: '15:00', hora_termino: '16:00'},
+                          {nombre: 'Daniel', hora_inicio: '15:00', hora_termino: '16:00'},
 
-{nombre: 'Daniel', hora_inicio: '17:00', hora_termino: '19:30'}
+                          {nombre: 'Daniel', hora_inicio: '17:00', hora_termino: '19:30'}
 
-],
+                          ],
 
-}
-</pre>
-</code>
-
-Construya una función o clase en JS que recibiendo el anterior JSON por
-
-parámetro, permita renderear una agenda semanal en html y con bloques de
-
-30 minutos como la siguiente:
-    </p>    
-        
-    </p><br/>
-    La agenda debe contener los distintos bloques y pintar con el nombre del paciente, las horas que están tomadas.
-
-Consideraciones:
-
-La agenda NO debe tener interacción solo dibujarse en la pantalla. No utilizar tablas, sólo DIVS La agenda debe tener un ancho de 960px y esta centrada en la pantalla
-
-
+                          }
+               </code>
+          </pre>
+     </p>
 </div>
+
+<body>
+  
+  <h1 class="title title__heading">Calendar Test</h1>
+  
+  <!-- Calendar -->
+  <div class="calendar calendar__wrapper">
+
+    <div id="hours-left" class="calendar__col calendar__col--hours"></div>
+
+    <div id="col-lunes" class="calendar__col"></div>
+    <div id="col-martes" class="calendar__col"></div>
+    <div id="col-miercoles" class="calendar__col"></div>
+    <div id="col-jueves" class="calendar__col"></div>
+    <div id="col-viernes" class="calendar__col"></div>
+ 
+
+    <div id="hours-right" class="calendar__col calendar__col--hours"></div>
+
+    <div style="clear:both"></div>
+
+  </div>
+
+</body>
+
+
